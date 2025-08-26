@@ -1,5 +1,5 @@
-/* Vivaldi Air v.6
-TODO: Suggestions?
+/* TODO
+Suggestions?
 */
 
 :root {
@@ -143,7 +143,7 @@ div#main.right #panels-container {
     backdrop-filter: blur(6px);
 }
 
-/* TABS */
+/* TABS & WINDOW CONTROLS*/
 
 #browser .tabbar-wrapper, #browser.tabs-top #header { background-color: transparent; }
 
@@ -151,26 +151,36 @@ div#main.right #panels-container {
     background-color: var(--overlayColor);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    margin: 5px 5px 0 5px;
     border-radius: var(--radius);
 }
-
-#titlebar {
-    position: absolute;
-    width: 100%;
-    left: 5px;
-    top: 5px;
-    right: 0px;
-    pointer-events: none;
+#browser:not(.transparent-tabbar) #tabs-tabbar-container.top {
+    margin: 5px 5px 0 5px;
+}
+#browser:not(.transparent-tabbar) #tabs-tabbar-container.left {
+    margin: 0 0 5px 5px;
+}
+#browser:not(.transparent-tabbar) #tabs-tabbar-container.right {
+    margin: 0 5px 5px 0;
 }
 
-#browser.win .window-buttongroup {
+/* For some reason window buttons are well placed with side tabs */
+#browser.win .window-buttongroup:not(.on-mainbar) {
     position: absolute;
     right: 10px;
     top: 0;
     overflow: hidden;
     line-height: initial;
 }
+
+#browser:not(.transparent-tabbar) #titlebar {
+    position: absolute;
+    width: 100%;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    pointer-events: none;
+}
+
 
 
 
@@ -500,4 +510,3 @@ button.button-startpage:after { content: unset; }
 /* ========================================================= */
 /* END STARTPAGE NAVIGATION */
 /* ========================================================= */
-
