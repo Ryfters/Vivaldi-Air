@@ -417,6 +417,12 @@ div#main #panels-container {
     font-weight: 500;
 }
 
+/* Startpage widgets */
+.Dashboard-Widgets .dashboard-widget {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px) !important;
+}
+
 /* Hover / active states with stronger blur */
 .startpage .startpage-navigation .button-startpage.active,
 .startpage .startpage-navigation .button-startpage:hover,
