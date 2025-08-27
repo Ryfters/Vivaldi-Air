@@ -85,7 +85,19 @@ Suggestions?
 
 #switch { padding-top: 5px; }
 
-div#main.right #panels-container {
+#panels-container.left.icons {
+    border-right: none !important;
+    min-width: 44px;
+    margin-left: 5px;
+}  
+
+#panels-container.right.icons {
+    border-right: none !important;
+    min-width: 44px;
+    margin-right: 5px;
+}  
+
+div#main #panels-container {
     padding-bottom: 5px;
 }
 
@@ -95,14 +107,15 @@ div#main.right #panels-container {
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
     padding-bottom: 5px;
-    padding-right: 4px;
     min-width: 44px;
+    width: fit-content;
+
 }
 
 #panels-container { background-color: transparent; }
 
 #panels .webpanel-stack .webpanel .webpanel-content {
-    margin-right: 7px;
+    margin-left: 7px;
     border-bottom-right-radius: var(--radius);
     border-top-right-radius: var(--radius);
 }
